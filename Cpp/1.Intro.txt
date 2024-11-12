@@ -1,0 +1,33 @@
+
+
+* Main Aim of OOP - to bind the data along with the function which will operate on them. So, no other code can access this data except for the function.
+
+* Four main features :-
+	- Abstraction.
+	- Encapsulation.
+	- Inheritence.
+	- Polymorphism.
+
+* Class - a logical entity used to define a user defined data type. (Usually modelling a real world entity)
+	- Contains data members (variables), methods and constructors.
+	- Data members : State & Methods : Behaviour of the Object.
+
+	class class_name{
+
+	};
+
+* Object.
+	- Object instantiation/creation: (static decleration)
+		class_name obj;	
+
+	- Dynamic creation:
+		class_name * obj = new class_name();
+
+
+131124.
+
+* Access Specifiers - specifies access restrictions on the class members.
+	=> public, private, protected.
+	- Default : private.
+
+

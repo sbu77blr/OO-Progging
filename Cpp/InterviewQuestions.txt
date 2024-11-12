@@ -1,0 +1,48 @@
+Interview Questions
+
+ 
+
+1.Why do we use OOPs?
+
+    * It gives clarity in programming and allows simplicity in solving complex problems.
+    * Data and code are bound together by encapsulation.
+    * Code can be reused, and it reduces redundancy.
+    * It also helps to hide unnecessary details with the help of Data Abstraction.
+    * Problems can be divided into subparts.
+    * It increases the readability, understandability, and maintainability of the code.
+
+ 
+
+2. What are the differences between the constructor and the method?
+    - defn
+    - same name & diff name as class.
+    - return type.
+    - method of calling.
+    - default provides & no default provision.
+ 
+
+3. What are the main features of OOPs?
+
+    * Inheritance
+    * Encapsulation
+    * Polymorphism
+    * Data Abstraction
+
+ 
+
+4. What are the disadvantage of OOPs?
+
+    * Requires pre-work and proper planning.
+    * In certain scenarios, programs can consume a large amount of memory.
+    * Not suitable for a small problem.
+    * Proper documentation is required for later use.
+
+
+5. What is the difference between class and structure?
+
+  Class: User-defined blueprint from which objects are created. It consists of methods or sets of instructions that are to be performed on the objects.
+
+  Structure: A structure is basically a user-defined collection of variables of different data types.
+ 
+
+6. What is the difference between a class and an object?
