@@ -30,4 +30,55 @@
 	=> public, private, protected.
 	- Default : private.
 
+181124
+-> Constructor & Destructors :-
+* def - spl func with same name as class, public, no-returnType,
+		For initialising the class variables.
 
+* Types :
+	- Default : 0-Arg constructor.
+
+	- Parameterized : args as provided by the progger.
+
+	- Copy : takes an object as an arg and copies the values of one object's data into another object of the same class.
+		=> class_name(class_name &obj)
+			{
+				... data_memN = obj.data_memN;
+			}
+
+* C++ provides a default constructor only until we create our own one.
+	=> when progger doesn't specify a default constr but defines only a param one; then the compiler will not provide the default constructor.
+
+
+* Constructor Overloading - more than one constructors w/ diff parameters so that each one performs a different task.
+	=> diff in number of types of parameters.
+
+* Destructors - spl func for releasing the resrces used by the object, during its lifetime.
+	- Same name as class, tilde(~), no return type, no args. 
+	- There can be only one destructor in a class.
+	- Cannot access the address of the destructor.
+
+* Destructors are alled when :
+	> object goes out of scope.
+	> prog ends.
+	> a scope w/ a local variable ends.
+	> delete operator is called.
+
+* When a destructor isn't specified in the code, compiler itself provides a default one.
+* If the object is created by using new or the constructor uses new to allocate memory that resides in the heap memory or the free store, the destructor should use delete to free the memory. (When should the destructor use delete to free the memory?)
+
+
+-> 'this' pointer :-
+
+* def - holds the address of the current object of the class.
+
+* Three main usages :-
+	- To refer to a current class instance variable.
+	- To pass the current obj as a parameter to another method.
+	- To declare indexers.
+
+* this ptr is implicitly passed when member functions are called.
+* 'this' ptr is accessible only in all the non-static class methods. 
+	=> If a method is static, then it is common to all the objects & hence a single obj cannot refer to it independently.
+
+	
