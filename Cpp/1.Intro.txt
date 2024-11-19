@@ -30,7 +30,7 @@
 	=> public, private, protected.
 	- Default : private.
 
-181124
+171124
 -> Constructor & Destructors :-
 * def - spl func with same name as class, public, no-returnType,
 		For initialising the class variables.
@@ -68,6 +68,7 @@
 * If the object is created by using new or the constructor uses new to allocate memory that resides in the heap memory or the free store, the destructor should use delete to free the memory. (When should the destructor use delete to free the memory?)
 
 
+181124 :-
 -> 'this' pointer :-
 
 * def - holds the address of the current object of the class.
@@ -80,5 +81,17 @@
 * this ptr is implicitly passed when member functions are called.
 * 'this' ptr is accessible only in all the non-static class methods. 
 	=> If a method is static, then it is common to all the objects & hence a single obj cannot refer to it independently.
+
+
+
+// 191124
+* Shallow Copy - here the pointer will be copied but not the memory which it points to.
+	=> Orig object and created copy will point to the same memory addresss.
+	Thus, any change made by one object will be visible in the other object too.
+
+	- C++ compiler automatically creates a copy constr., and assignment operator to perform the shallow copy.
+
+* Deep Copy - here the pointer will be created by copying each of the fields. It also allocates a new memory structure, similar to that of the earlier object.
+	Changes made to the pointer / array values will not get reflected in the original pointer / array values.
 
 	
