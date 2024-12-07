@@ -30,6 +30,8 @@
 	=> public, private, protected.
 	- Default : private.
 
+* Public methods (member functions) are created to access the private data members. [+ on 071224]
+
 171124
 -> Constructor & Destructors :-
 * def - spl func with same name as class, public, no-returnType,
@@ -82,6 +84,7 @@
 * 'this' ptr is accessible only in all the non-static class methods. 
 	=> If a method is static, then it is common to all the objects & hence a single obj cannot refer to it independently.
 
+* '->' operator is used to access the data and members using 'this' ptr.
 
 
 // 191124
@@ -94,4 +97,5 @@
 * Deep Copy - here the pointer will be created by copying each of the fields. It also allocates a new memory structure, similar to that of the earlier object.
 	Changes made to the pointer / array values will not get reflected in the original pointer / array values.
 
-	
+// 071224
+The Four Pillars of OOP.

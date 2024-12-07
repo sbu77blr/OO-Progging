@@ -1,0 +1,86 @@
+
+// Created on 071224
+
+Pillars of OOP 
+
+    OOP has four main pillars :-
+	    - Abstraction.
+	    - Encapsulation.
+	    - Inheritence.
+	    - Polymorphism.
+
+
+-> Encapsulation & Abstraction:-
+
+* Encapsulation can be achieved using access specifiers.
+	=> inturn achieves data abstraction.
+
+* Abstraction focuses on 'what' an object does, rather than 'how' it is done.
+
+* Encapsulation : data binding :: Abstraction : data hiding.
+
+
+
+-> Inheritence :-
+
+S : class ParentClass{
+
+	};
+
+	class ChildClass : visibility_mode ParentClass{
+
+	};
+
+* Visibility Modes : they specify the access-specification of the base class members after they are derived in the derived class.
+	- public : base class's public & protected members will remain as public & protected only, in the derived class.
+
+	- private : " .. will become private members in the derived class.
+
+	- protected : " .. will become protected members.
+
+* In any mode, the private methods of the base class will remain inaccessible in the derived class.
+
+* Types :-
+	- Single.
+	- Multi-level.
+	- Multiple. - classes are seperated using comma.
+	- Hierarchical.
+	- Hybrid.
+
+* Limitations :-
+	- Needs more time to process : to navigate through multiple classes for the implementation.
+	- Classes are tightly coupled.
+	- Complex implementation & requires elaborate planning.
+
+
+
+-> Polymorphism :-
+
+* Types :-
+	- Compile-time Poly - AKA Static poly.
+		> Function overloading - multiple functions w/ same name but different number or types of args. (or variation in both).
+		> Operator overloading.
+
+	- Run-time Poly - AKA Dynamic Poly.
+		> Method Overriding.
+
+* Operator Overloading :
+	- Can be used for user-defined operators & not for in-built types.
+
+	- Overloadable operators. <img>.
+
+	- Operators that cannot be overloaded - '::', '.*', '.', '?:'.
+
+* Method Overriding :
+	- Allows us to redefine a parent class method in the child class, inorder to meet a specific requirement.
+
+	- Rules :
+		> Possible in the case of inheritance only.
+		> Method name must remain the same.
+		> Same args must be defined in the function signature.
+
+* The destructor of a class cannot be OVERLOADED.
+
+* Advantages :-
+	- Improves readability.
+	- Helps in providing implementation to an abstract base class or an interface.
