@@ -1,0 +1,127 @@
+
+// 111224. (started 10th and crossed 12am)
+// Document w/ the new concepts.
+
+-> Virtual Functions :-
+
+It is a member function in the base class that is supposed to be overridden in derived classes.
+* This especially applies to cases where a pointer of base class points to a derived class object.
+    (similar to Dynamic Method Dispatch concept of Java)
+* Here, C++ will decided which function is invoked at the runtime, based on the type of object pointer by the base class pointer. (when the called function is made virtual).
+
+Eg : 
+clas Base{
+    public:
+        virtual void print()
+        {
+            cout << "Base function." << endl;
+        }
+};
+
+class Derived : public Base{
+    public:
+    void print()
+    {
+        cout << "Derived Function." << endl;
+    }
+};
+
+int main(void){
+    Derived derived1;
+
+    // Ptr of Base type that points to derived1 object.
+    Base * base1 = &derived1;
+
+    // Call to print() of Derived class.
+    base1 -> print();
+    return 0;
+}
+
+
+* Pure Virtual Function - it is that virtual function which does not have any implementation. They do not have functions defn., and are only to declared. 
+    - It is declared by assigning 0 in the declaration.
+
+Eg :- 
+class A{
+    public:
+        // A pure virtual function.
+        virtual void func1() = 0;
+}
+
+    - Such a function must be overriden in the base class, or else the derived class will also become an abstract class.
+
+* A form of Runtime Polymorphism.
+* Every virtual function need not be overridden, i.e it can be used as it is in the base class. It is only the pure virtual functions which are to be overridden.
+* Constructors cannot be virtual.
+
+-> Abstract Class :-
+
+* These are classes which cannot be instantiated. => classes whose objects cannot be created.
+    - However, they can be derived and then instantiated.
+
+* They have atleast one pure virtual function.
+    - They can have normal functions and variables also.
+
+* If an abstract class is derived, then all its pure functions must be implemented(i.e overridden) in the Derived class.
+    - If not, the derived class will become abstract.
+
+* The data members and member functions of abstract classes can be used after inheriting them; except for their virtual functions, which have to be overridden.
+
+Eg : 
+class Base{
+    public: 
+        virtual void s() = 0;   // A pure virtual function.
+};
+
+class Derived : public Base {
+    public:
+        void s(){
+            cout << "Virtual Function in Derived_class" << endl;
+        }
+};
+
+int main(){
+    Base * b;
+    Derived d_obj;
+    b = &d_obj;
+    b->s();
+}
+
+
+-> Friend Function :-
+
+* A spl function in C++, which will allow access to the protected and private data of a class.
+
+* It is defined outside of that class's scope.
+    - But the prototypes for friend functions will appear in the class definition.
+    - Yet, they are not members of that class.
+
+* 'friend' keyword is used to declare the friend function INSIDE the class.
+    - But it is defined as an ordinary function, OUTSIDE the class.
+
+Eg :-
+class Rectangle{
+    int length;
+
+    public:
+        Rectangle(int length){
+            this->length = length;
+        }
+        friend int printLength(Rectangle& obj);
+};
+
+int printLength(Rectangle& obj){
+    return obj.length;
+}
+
+int main(){
+    Rectangle rect = Rectangle(25);
+    cout << "Length = ", printLength(rect) << endl;
+}
+
+* Characteristics :-
+    - Can be declared in either the private or public section of the class.
+    - Called as a normal function without using an object.
+    - It is not within the scope of the class, of which it is a friend.
+    - Can access the private and protected members of the class, through an object of the class and using the 'dot' operator.
+    - It can be either a global function OR a member of another class.
